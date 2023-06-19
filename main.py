@@ -92,7 +92,7 @@ if __name__ == '__main__':
     if args.method in ['AllSetTransformer', 'AllDeepSets']:
         data = ExtractV2E(data)  # node to edge
         if args.add_self_loop:
-            data = Add_Self_Loops(data)  # 每一条self-loop 算一条新增的超边
+            data = Add_Self_Loops(data) 
         if args.exclude_self:
             data = expand_edge_index(data)
 
