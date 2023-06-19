@@ -85,16 +85,6 @@ def parser_data(data):
     parser.set_defaults(HCHA_symdegnorm=False)
     parser.add_argument('--valid_prop', type=float, default=0.25)
     parser.add_argument('--display_step', type=int, default=1)
-
-    '''
-          mask node: mask some nodes
-          edge: permute edges with ratio
-          hyperedge: permute hyperedges
-          mask_col: wrong
-          adapt: adapt_edge: 通过边的degree 去确定边权重值去决定删不删边，删边策略参考伯努利分布的权值大小
-                 adapt_feat: 通过点的degree 去确定点的权值以及mask掉点 or not
-          drop: 
-          '''
     if data == 'cora':
         parser.add_argument('--All_num_layers', default=1, type=int)
         parser.add_argument('--MLP_num_layers', default=1,type=int)  # How many layers of encoder
